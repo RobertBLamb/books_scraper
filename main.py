@@ -219,7 +219,3 @@ class Application(tk.Frame):
 root = tk.Tk()
 app = Application(master=root)
 app.mainloop()
-
-
-# TODO: make sure user cant press button while the script is active
-# TODO: adjust where the file name shows, currently too long for the box, maybe line below
