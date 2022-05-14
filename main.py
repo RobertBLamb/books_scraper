@@ -71,10 +71,10 @@ class Application(tk.Frame):
                 title=None, message="Please upload a CSV or XLSX file")
             self.filePath = None
         elif self.filePath.endswith('.csv'):
-            self.fileName.set(self.filePath)
+            self.fileName.set(self.filePath.split('/')[-1])
             self.data = pd.read_csv(self.filePath)
         else:
-            self.fileName.set(self.filePath)
+            self.fileName.set(self.filePath.split('/')[-1])
             self.data = pd.read_excel(self.filePath, sheet_name=0)
 
     # main script: goes through uploaded file and updates the genre
